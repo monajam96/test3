@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+}
+body{ 
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(47, 7, 70);
+}
+
+.container{
+    
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.header , .footer{
+    height: 15vh;
+    background-color: lightblue;
+    flex-basis: 100%;
+    padding-top: 40px;
+
+}
+.nav , .side-menu{
+    width: calc(20% - 6px);
+    background-color: antiquewhite;
+
+}
+.content{
+    width: calc(60% - 6px);
+    background-color: brown;
+}
+.side-menu ,.nav ,.content{
+    height: 70vh;
+    padding-top: 200px;
+}
+.item{
+    margin: 3px;
+}
+@media screen and (max-width:768px) {
+    .header{
+        order: 0;
+    }
+    .side-menu{
+        order: 1;
+        width: 100%;
+    }
+    .content{
+        order: 2;
+        width: 100%;
+    }
+    .nav{
+        order: 3;
+        width: 100%;
+    }
+    .footer{
+        order: 4;
+    }
+    
+}
